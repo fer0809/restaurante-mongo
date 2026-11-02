@@ -1,6 +1,6 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
-const Plato = require('../src/models/Plato');
+const Plato = require('./src/models/Plato');
 
 const platos = [
   { nombre:'Ensalada César', descripcion:'Lechuga, crutones y parmesano', ingredientes:['lechuga','crutones','parmesano','aderezo césar'], precio:1200, aptoCeliacos:false, aptoVeganos:false, aptoDiabeticos:true, calorias:350, imagen:'https://example.com/cesar.jpg' },
