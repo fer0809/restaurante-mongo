@@ -3,17 +3,22 @@
 <head>
 <meta charset="utf-8">
 <title>Restaurante</title>
+<style>
+body{font-family:Arial;margin:20px}
+.card{border:1px solid #ccc;padding:10px;margin:10px;display:inline-block;width:220px;vertical-align:top}
+img{width:100%;height:140px;object-fit:cover}
+</style>
 </head>
 <body>
 <h1>Platos</h1>
-<ul id="lista"></ul>
+<div id="lista"></div>
 <script>
 fetch('/api/platos').then(r=>r.json()).then(data=>{
-  const ul=document.getElementById('lista');
+  const div=document.getElementById('lista');
   data.forEach(p=>{
-    const li=document.createElement('li');
-    li.textContent=p.nombre+' - $'+p.precio;
-    ul.appendChild(li);
+    const c=document.createElement('div');c.className='card';
+    c.innerHTML=`<img src="${p.imagen}" alt="${p.nombre}"><h3>${p.nombre}</h3><p>${p.descripcion}</p><p>$${p.precio} - ${p.calorias} kcal</p>`;
+    div.appendChild(c);
   });
 });
 </script>
