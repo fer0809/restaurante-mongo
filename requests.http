@@ -1,0 +1,30 @@
+### Crear plato
+POST http://localhost:3000/api/platos
+Content-Type: application/json
+
+{
+  "nombre": "Nuevo plato",
+  "descripcion": "Prueba",
+  "ingredientes": ["a","b"],
+  "precio": 1000,
+  "aptoCeliacos": true,
+  "aptoVeganos": false,
+  "aptoDiabeticos": true,
+  "calorias": 200,
+  "imagen": "https://example.com/x.jpg"
+}
+
+### Listar
+GET http://localhost:3000/api/platos
+
+### Obtener por id (reemplazar ID)
+GET http://localhost:3000/api/platos/ID
+
+### Modificar
+PUT http://localhost:3000/api/platos/ID
+Content-Type: application/json
+
+{ "precio": 1100 }
+
+### Baja
+DELETE http://localhost:3000/api/platos/ID
