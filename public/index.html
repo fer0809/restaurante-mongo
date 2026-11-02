@@ -17,7 +17,7 @@ fetch('/api/platos').then(r=>r.json()).then(data=>{
   const div=document.getElementById('lista');
   data.forEach(p=>{
     const c=document.createElement('div');c.className='card';
-    c.innerHTML=`<img src="${p.imagen}" alt="${p.nombre}"><h3>${p.nombre}</h3><p>${p.descripcion}</p><p>$${p.precio} - ${p.calorias} kcal</p>`;
+    c.innerHTML=`<img src="${p.imagen}" alt="${p.nombre}" onerror="this.src='https://via.placeholder.com/220x140?text=Sin+imagen'"><h3>${p.nombre}</h3><p>${p.descripcion}</p><p>$${p.precio} - ${p.calorias} kcal</p>`;
     div.appendChild(c);
   });
 });
