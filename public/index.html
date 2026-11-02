@@ -4,21 +4,29 @@
 <meta charset="utf-8">
 <title>Restaurante</title>
 <style>
-body{font-family:Arial;margin:20px}
-.card{border:1px solid #ccc;padding:10px;margin:10px;display:inline-block;width:220px;vertical-align:top}
-img{width:100%;height:140px;object-fit:cover}
+*{box-sizing:border-box}
+body{font-family:system-ui,Arial;margin:0;background:#f5f5f5}
+header{background:#222;color:#fff;padding:16px 24px}
+h1{margin:0;font-size:24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;padding:24px}
+.card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.card img{width:100%;height:160px;object-fit:cover}
+.card .body{padding:12px}
+.card h3{margin:0 0 6px;font-size:18px}
+.card p{margin:0 0 8px;color:#555;font-size:14px}
+.price{font-weight:bold;color:#2a7}
 </style>
 </head>
 <body>
-<h1>Platos</h1>
-<div id="lista"></div>
+<header><h1>Menú del Restaurante</h1></header>
+<div class="grid" id="lista"></div>
 <script>
 fetch('/api/platos').then(r=>r.json()).then(data=>{
-  const div=document.getElementById('lista');
+  const grid=document.getElementById('lista');
   data.forEach(p=>{
     const c=document.createElement('div');c.className='card';
-    c.innerHTML=`<img src="${p.imagen}" alt="${p.nombre}" onerror="this.src='https://via.placeholder.com/220x140?text=Sin+imagen'"><h3>${p.nombre}</h3><p>${p.descripcion}</p><p>$${p.precio} - ${p.calorias} kcal</p>`;
-    div.appendChild(c);
+    c.innerHTML=`<img src="${p.imagen}" alt="${p.nombre}" onerror="this.src='https://via.placeholder.com/240x160?text=Sin+imagen'"><div class="body"><h3>${p.nombre}</h3><p>${p.descripcion}</p><p class="price">$${p.precio} · ${p.calorias} kcal</p></div>`;
+    grid.appendChild(c);
   });
 });
 </script>
