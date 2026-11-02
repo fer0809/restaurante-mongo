@@ -12,7 +12,7 @@ const platos = [
   { nombre:'Tarta de frutas', descripcion:'Tarta light', ingredientes:['frutas','harina integral','stevia'], precio:1100, aptoCeliacos:false, aptoVeganos:false, aptoDiabeticos:true, calorias:290, imagen:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujseyQGdIYUNbntZNLoSggdSziLFGddHReNc4XqGYSg&s=10' },
   { nombre:'Wrap de pollo', descripcion:'Wrap con pollo grillado', ingredientes:['pollo','tortilla','lechuga','mayonesa'], precio:1300, aptoCeliacos:false, aptoVeganos:false, aptoDiabeticos:true, calorias:480, imagen:'https://example.com/wrap.jpg' },
   { nombre:'Bowl de quinoa', descripcion:'Bowl vegano de quinoa', ingredientes:['quinoa','garbanzos','espinaca','tomate'], precio:1600, aptoCeliacos:true, aptoVeganos:true, aptoDiabeticos:true, calorias:410, imagen:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuKW0-CApAAF5lltwNJs-hSu7g7d7Ni6w4UW4a7xMmaQ&s=10' },
-  { nombre:'Helado artesanal', descripcion:'Helado de vainilla', ingredientes:['leche','crema','vainilla','azúcar'], precio:800, aptoCeliacos:true, aptoVeganos:false, aptoDiabeticos:false, calorias:260, imagen:'https://example.com/helado.jpg' }
+  { nombre:'Helado artesanal', descripcion:'Helado de vainilla', ingredientes:['leche','crema','vainilla','azúcar'], precio:800, aptoCeliacos:true, aptoVeganos:false, aptoDiabeticos:false, calorias:260, imagen:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQumAwVKwNcY_LJ_v6gaTm-MY3SvI3HhmdVz24o4WUNAg&s=10' }
 ];
 
 (async () => {
