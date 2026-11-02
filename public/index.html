@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Restaurante</title>
+</head>
+<body>
+<h1>Platos</h1>
+<ul id="lista"></ul>
+<script>
+fetch('/api/platos').then(r=>r.json()).then(data=>{
+  const ul=document.getElementById('lista');
+  data.forEach(p=>{
+    const li=document.createElement('li');
+    li.textContent=p.nombre+' - $'+p.precio;
+    ul.appendChild(li);
+  });
+});
+</script>
+</body>
+</html>
