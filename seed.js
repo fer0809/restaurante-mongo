@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Plato = require('./src/models/Plato');
 
 const platos = [
-  { nombre:'Ensalada César', descripcion:'Lechuga, crutones y parmesano', ingredientes:['lechuga','crutones','parmesano','aderezo césar'], precio:1200, aptoCeliacos:false, aptoVeganos:false, aptoDiabeticos:true, calorias:350, imagen:'https://example.com/cesar.jpg' },
+  { nombre:'Ensalada César', descripcion:'Lechuga, crutones y parmesano', ingredientes:['lechuga','crutones','parmesano','aderezo césar'], precio:1200, aptoCeliacos:false, aptoVeganos:false, aptoDiabeticos:true, calorias:350, imagen:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk7D0lxCz6bCyE29xRRogtNmDSlxharrgPaBuWgTI8Gw&s=10' },
   { nombre:'Pizza Margherita', descripcion:'Pizza clásica con tomate y mozzarella', ingredientes:['harina','tomate','mozzarella','albahaca'], precio:1800, aptoCeliacos:false, aptoVeganos:false, aptoDiabeticos:false, calorias:800, imagen:'https://example.com/pizza.jpg' },
   { nombre:'Sopa de verduras', descripcion:'Sopa light de verduras', ingredientes:['zanahoria','papa','apio','caldo'], precio:900, aptoCeliacos:true, aptoVeganos:true, aptoDiabeticos:true, calorias:180, imagen:'https://example.com/sopa.jpg' },
   { nombre:'Hamburguesa vegana', descripcion:'Hamburguesa de lentejas', ingredientes:['lentejas','pan integral','lechuga','tomate'], precio:1500, aptoCeliacos:false, aptoVeganos:true, aptoDiabeticos:true, calorias:520, imagen:'https://example.com/hv.jpg' },
